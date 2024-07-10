@@ -117,13 +117,16 @@ public class CollectiblesManager : MonoBehaviour
 
         while (elapsedTime < duration)
         {
+            // Move the object up.
             var newY = Mathf.Lerp(startPosition.y, endPosition.y, elapsedTime / duration);
             obj.transform.position = new Vector3(obj.transform.position.x, newY, obj.transform.position.z);
 
+            // Fade out the object.
             var color = spriteRenderer.color;
             color.a = Mathf.Lerp(1f, 0f, elapsedTime / duration);
             spriteRenderer.color = color;
 
+            // Update the time.
             elapsedTime += Time.deltaTime;
             yield return null;
         }
