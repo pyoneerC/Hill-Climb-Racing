@@ -60,5 +60,3 @@ Distributed under the MIT License. See [LICENSE](https://github.com/pyoneerC/Hil
 - Original Hill Climb Racing Game Developers
 - Unity Community
 - All Contributors and Players
-
-Thank you for checking out our project. We hope you enjoy playing it as much as we enjoyed making it!
