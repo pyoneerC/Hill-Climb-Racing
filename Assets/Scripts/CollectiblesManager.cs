@@ -58,7 +58,9 @@ public class CollectiblesManager : MonoBehaviour
     /// <summary>
     /// Handles the collection of fuel and coins trough overlaps.
     /// </summary>
-    /// <param name="other"></param>
+    /// <param name="other">
+    /// The collectible's collider that the car overlapped with.
+    /// </param>
     /// <returns>
     /// void
     /// </returns>
@@ -103,7 +105,9 @@ public class CollectiblesManager : MonoBehaviour
     /// <summary>
     /// Makes the collectible float away and fade out.
     /// </summary>
-    /// <param name="obj"></param>
+    /// <param name="obj">
+    /// The collectible object to be animated.
+    /// </param>
     /// <returns>
     /// It really returns void, but Unity requires it to return IEnumerator for coroutines and delays.
     /// </returns>

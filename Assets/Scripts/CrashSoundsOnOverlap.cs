@@ -13,7 +13,9 @@ public class CrashSoundsOnOverlap : MonoBehaviour
     /// <summary>
     /// Plays a random crash sound when the car collides with the ground.
     /// </summary>
-    /// <param name="other"></param>
+    /// <param name="other">
+    /// The other collider that the car collided with.
+    /// </param>
     /// <returns>
     /// void
     /// </returns>
