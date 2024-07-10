@@ -5,7 +5,7 @@ This project is a reimplementation of the popular mobile game Hill Climb Racing,
 ## Features
 
 - **Handmade Level:** Explore a carefully crafted level, with its unique challenges and secrets.
-- **Collectible:** Collect coins and fuel cans to keep your journey going. Use coins to upgrade your vehicle.
+- **Collectibles:** Collect coins and fuel cans to keep your journey going. Use coins to upgrade your vehicle.
 - **Sound Effects:** Enjoy immersive sound effects that enhance your gameplay experience, including engine sounds, coin collection, and more.
 - **UI Enhancements:** Experience an intuitive and user-friendly interface that makes navigation and gameplay smooth.
 - **Wonky Physics:** The physics might be wonky, but that's where the fun begins! Become skilled at balancing and maneuvering your vehicle through rugged terrain.
