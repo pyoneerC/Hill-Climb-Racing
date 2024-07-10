@@ -38,13 +38,21 @@ public class UIManager : MonoBehaviour
         _startPosition = collectiblesManager.carBody.transform.position;
     }
 
-    private void Update() {
+    /// <summary>
+    /// This method is responsible for updating the all the UI elements.
+    /// </summary>
+    /// <returns>
+    /// void
+    /// </returns>
+    private void Update()
+    {
 
         if (collectiblesManager.fuel <= 0)
         {
             RestartLevel();
         }
 
+        // Updates the gas and brake pedal sprites based on the player's input
         gasPedal.sprite = Input.GetKey(KeyCode.D) ? gasPedalPressed : gasPedalNormal;
         brakePedal.sprite = Input.GetKey(KeyCode.A) ? brakePedalPressed : brakePedalNormal;
 
@@ -55,21 +63,38 @@ public class UIManager : MonoBehaviour
 
         UpdateRpmCounter();
         UpdateBoostCounter();
+    }
 
-        fuelCounter.text = collectiblesManager.fuel.ToString("F0") + "%";
-        fuelCounter.color = fuelGradient.Evaluate(collectiblesManager.fuel / 100f);
-        }
-
+    /// <summary>
+    /// This method is responsible for updating the UI boost counter. Called on Update.
+    /// </summary>
+    /// <returns>
+    /// void
+    /// </returns>
     private void UpdateBoostCounter()
     {
+        // Updates the boost counter text with the car's velocity multiplied by 0.5
         boostCounter.text = Mathf.Abs(collectiblesManager.carBody.velocity.magnitude * .5f).ToString("F0");
     }
 
+    /// <summary>
+    /// This method is responsible for updating the UI RPM counter and the distance counter. Called on Update.
+    /// </summary>
+    /// <returns>
+    /// void
+    /// </returns>
+    /// <remarks>
+    /// The RPM counter is calculated by multiplying the car's velocity by 3.
+    /// </remarks>
     private void UpdateRpmCounter()
     {
+        // Calculates the distance between the car's current position and the starting position
         var distance = collectiblesManager.carBody.transform.position - _startPosition;
+
+        // Updates the distance counter text, formatting the distance to a whole number
         distanceCounter.text = distance.magnitude.ToString("F0") + "m";
 
+        // Updates the RPM counter text with the car's velocity multiplied by 3
         rpmCounter.text = Mathf.Abs(collectiblesManager.carBody.velocity.magnitude * 3).ToString("F0");
     }
 
@@ -146,8 +171,15 @@ public class UIManager : MonoBehaviour
     private void UpdateFuelGUI()
     {
         fuelImageProgressBar.fillAmount = collectiblesManager.fuel / 100f;
-        // Gradient color based on fuel level
+        
+        // Gradient color based on fuel level for the fuel progress bar
         fuelImageProgressBar.color = fuelGradient.Evaluate(collectiblesManager.fuel / 100f);
+
+        // Updates the fuel counter text with the fuel level as a percentage
+        fuelCounter.text = collectiblesManager.fuel.ToString("F0") + "%";
+
+        // Gradient color based on fuel level for the fuel counter text
+        fuelCounter.color = fuelGradient.Evaluate(collectiblesManager.fuel / 100f);
     }
 
     /// <summary>
