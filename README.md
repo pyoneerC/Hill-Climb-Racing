@@ -1,6 +1,6 @@
 # Hill Climb Racing Recreation
 
-This project is a reimplementation of the popular mobile game Hill Climb Racing, built with the Unity Game Engine. It aims to recreate the addictive gameplay experience with added features and improvements. Dive into a world with a handmade level, collectibles, immersive sound effects, intuitive UI, and delightfully wonky physics designed to challenge and entertain.
+This project is a reimplementation of the popular mobile game Hill Climb Racing, built with the _Unity Game Engine_. It aims to recreate the addictive gameplay experience with added features and improvements. Dive into a world with a handmade level, collectibles, immersive sound effects, intuitive UI, and delightfully wonky physics designed to challenge and entertain.
 
 ## Features
 
@@ -23,7 +23,7 @@ Experience the thrill of hill climb racing right in your browser. [Play now!](ht
 *Speeding through the hills*
 
 ![Unity](img/Screenshot_3.png)
-*Behind the scenes with Unity*
+*Behind the scenes in Unity*
 
 ## Getting Started
 
@@ -53,7 +53,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/pyoneerC/Hill-Climb-Racing/blob/main/LICENSE.md) for more information.
 
 ## Acknowledgments
 
