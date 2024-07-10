@@ -73,11 +73,21 @@ public class UIManager : MonoBehaviour
         rpmCounter.text = Mathf.Abs(collectiblesManager.carBody.velocity.magnitude * 3).ToString("F0");
     }
 
+    /// <summary>
+    /// This method is responsible for checking if the fuel level is low and displaying the low fuel warning. Called on Update.
+    /// </summary>
+    /// <returns>
+    /// void
+    /// </returns>
+    /// <remarks>
+    /// The low fuel warning is displayed when the fuel level is below 20%.
+    /// </remarks>
     private void CheckLowFuelWarning()
     {
         if (collectiblesManager.fuel < 20)
         {
             lowFuelWarning.enabled = true;
+            // Pulsing effect for the low fuel warning
             lowFuelWarning.color = new Color(lowFuelWarning.color.r,
                 lowFuelWarning.color.g, lowFuelWarning.color.b, Mathf.PingPong(Time.time, 0.5f));
         }
@@ -87,29 +97,42 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// This method is responsible for restarting the level. Called when the player runs out of fuel.
+    /// </summary>
+    /// <returns>
+    /// void
+    /// </returns>
     public static void RestartLevel()
     {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            // Resets the time scale to 1 in case the game was paused
             Time.timeScale = 1;
     }
 
     /// <summary>
     /// This method is responsible for pausing the game. It toggles the Time.timeScale between 0 and 1. Called when the pause button is clicked.
     /// </summary>
-    /// <returns></returns>
+    /// <returns>
+    /// void
+    /// </returns>
     public void PauseGame()
     {
 
         if (_a)
         {
             Time.timeScale = 0;
+            // Sets the color of the pause button to red when the game is paused
             pauseButtonBg.color = new Color(1f,0,0,1f);
+            // Toggles the value of _a
             _a = false;
         }
         else
         {
             Time.timeScale = 1;
+            // Sets the color of the pause button to white when the game is unpaused (default)
             pauseButtonBg.color = new Color(1,1f,1,1f);
+            // Toggles the value of _a
             _a = true;
         }
     }
