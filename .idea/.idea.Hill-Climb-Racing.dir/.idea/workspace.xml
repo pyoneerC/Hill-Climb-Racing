@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71704595-48ca-4a13-883b-5bedee1dd404" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CrashSoundsOnOverlap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CrashSoundsOnOverlap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720640851975</updated>
-      <workItem from="1720640853882" duration="3025000" />
+      <workItem from="1720640853882" duration="3548000" />
     </task>
     <servers />
   </component>

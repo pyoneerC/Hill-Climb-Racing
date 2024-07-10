@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// This class is responsible for managing the UI elements of the game.
+/// </summary>
 public class UIManager : MonoBehaviour
 {
     public Image fuelImageProgressBar;
@@ -90,42 +93,71 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 1;
     }
 
-        public void PauseGame()
-        {
+    /// <summary>
+    /// This method is responsible for pausing the game. It toggles the Time.timeScale between 0 and 1. Called when the pause button is clicked.
+    /// </summary>
+    /// <returns></returns>
+    public void PauseGame()
+    {
 
-            if (_a)
-            {
-                Time.timeScale = 0;
-                pauseButtonBg.color = new Color(1f,0,0,1f);
-                _a = false;
-            }
-            else
-            {
-                Time.timeScale = 1;
-                pauseButtonBg.color = new Color(1,1f,1,1f);
-                _a = true;
-            }
-        }
-
-        private void UpdateFuelGUI()
+        if (_a)
         {
-            fuelImageProgressBar.fillAmount = collectiblesManager.fuel / 100f;
-            fuelImageProgressBar.color = fuelGradient.Evaluate(collectiblesManager.fuel / 100f);
+            Time.timeScale = 0;
+            pauseButtonBg.color = new Color(1f,0,0,1f);
+            _a = false;
         }
-
-        private void UpdateCoinGUI()
+        else
         {
-            coinText.text = collectiblesManager.coins.ToString();
+            Time.timeScale = 1;
+            pauseButtonBg.color = new Color(1,1f,1,1f);
+            _a = true;
         }
+    }
 
-        public void PulseCoinSprite()
-        {
-            coinSprite.transform.localScale = Vector3.one * (0.3f + Mathf.PingPong(Time.time, 0.2f));
-        }
+    /// <summary>
+    /// This method is responsible for updating the fuel GUI. It updates the fill amount of the fuel image and the color of the fuel image based on the fuel level. Called on Update.
+    /// </summary>
+    /// <returns>
+    /// void
+    /// </returns>
+    private void UpdateFuelGUI()
+    {
+        fuelImageProgressBar.fillAmount = collectiblesManager.fuel / 100f;
+        // Gradient color based on fuel level
+        fuelImageProgressBar.color = fuelGradient.Evaluate(collectiblesManager.fuel / 100f);
+    }
 
-        public void ToggleSfx()
-        {
-            sfxButton.image.sprite = sfxButton.image.sprite == sfxButtonOn ? sfxButtonOff : sfxButtonOn;
-            audioManager.ToggleAllSfx();
-        }
+    /// <summary>
+    /// This method is responsible for updating the coin GUI Text. It converts the coin count to a string and updates the text.
+    /// </summary>
+    /// <returns>
+    /// void
+    /// </returns>
+    private void UpdateCoinGUI()
+    {
+        coinText.text = collectiblesManager.coins.ToString();
+    }
+
+    /// <summary>
+    /// This method is responsible for pulsing the coin sprite in the UI when the player collects a coin.
+    /// </summary>
+    /// <returns>
+    /// void
+    /// </returns>
+    public void PulseCoinSprite()
+    {
+        coinSprite.transform.localScale = Vector3.one * (0.3f + Mathf.PingPong(Time.time, 0.2f));
+    }
+
+    /// <summary>
+    /// This method is responsible for toggling the SFX UI button ON/OFF. Called when the SFX button is clicked.
+    /// </summary>
+    /// <returns>
+    /// void
+    /// </returns>
+    public void ToggleSfx()
+    {
+        sfxButton.image.sprite = sfxButton.image.sprite == sfxButtonOn ? sfxButtonOff : sfxButtonOn;
+        audioManager.ToggleAllSfx();
+    }
 }
