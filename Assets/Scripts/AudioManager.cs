@@ -54,6 +54,9 @@ public class AudioManager : MonoBehaviour
         _isBackgroundMusicOn = !_isBackgroundMusicOn;
     }
 
+    /// <summary>
+    /// Played when the player touches any coin collectible.
+    /// </summary>
     public void PlayOneShotCoinSound()
     {
         if (_isSfxOn)
