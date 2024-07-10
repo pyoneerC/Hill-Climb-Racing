@@ -52,9 +52,7 @@ public class UIManager : MonoBehaviour
             RestartLevel();
         }
 
-        // Updates the gas and brake pedal sprites based on the player's input
-        gasPedal.sprite = Input.GetKey(KeyCode.D) ? gasPedalPressed : gasPedalNormal;
-        brakePedal.sprite = Input.GetKey(KeyCode.A) ? brakePedalPressed : brakePedalNormal;
+        UpdateGasBrakeSprites();
 
         CheckLowFuelWarning();
 
@@ -171,7 +169,7 @@ public class UIManager : MonoBehaviour
     private void UpdateFuelGUI()
     {
         fuelImageProgressBar.fillAmount = collectiblesManager.fuel / 100f;
-        
+
         // Gradient color based on fuel level for the fuel progress bar
         fuelImageProgressBar.color = fuelGradient.Evaluate(collectiblesManager.fuel / 100f);
 
@@ -214,5 +212,18 @@ public class UIManager : MonoBehaviour
     {
         sfxButton.image.sprite = sfxButton.image.sprite == sfxButtonOn ? sfxButtonOff : sfxButtonOn;
         audioManager.ToggleAllSfx();
+    }
+
+    /// <summary>
+    /// This method is responsible for updating the gas and brake pedal sprites based on the player's input. Called on Update.
+    /// </summary>
+    /// <returns>
+    /// void
+    /// </returns>
+    public void UpdateGasBrakeSprites()
+    {
+        // Updates the gas and brake pedal sprites based on the player's input
+        gasPedal.sprite = Input.GetKey(KeyCode.D) ? gasPedalPressed : gasPedalNormal;
+        brakePedal.sprite = Input.GetKey(KeyCode.A) ? brakePedalPressed : brakePedalNormal;
     }
 }
