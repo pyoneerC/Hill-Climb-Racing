@@ -2,6 +2,8 @@
 
 This project is a reimplementation of the popular mobile game Hill Climb Racing, built with the _Unity Game Engine_. It aims to recreate the addictive gameplay experience with added features and improvements. Dive into a world with a handmade level, collectibles, immersive sound effects, intuitive UI, and delightfully wonky physics designed to challenge and entertain.
 
+![demohcr.gif](img/demohcr.gif)
+
 ## Features
 
 - **Handmade Level:** Explore a carefully crafted level, with its unique challenges and secrets.
