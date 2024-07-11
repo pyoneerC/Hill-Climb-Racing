@@ -14,7 +14,8 @@ This project is a reimplementation of the popular mobile game Hill Climb Racing,
 
 ## Play Now
 
-Experience the thrill of hill climb racing right in your browser. [Play now!](https://pyoneerc1.itch.io/hill-climb-racing-recreation)
+> [!INFO]
+> Experience the thrill of hill climb racing right in your browser. [Play now!](https://pyoneerc1.itch.io/hill-climb-racing-recreation)
 
 ## Screenshots
 
