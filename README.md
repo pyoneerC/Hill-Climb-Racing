@@ -44,6 +44,14 @@ git clone https://github.com/pyoneerC/Hill-Climb-Racing-Recreation.git
 2. Open the project in Unity Editor.
 3. Navigate to the `Scenes` folder and open the main scene to start editing or playing.
 
+### How to Play
+
+- Use the `arrow keys` or `WASD` to control the vehicle.
+- Use `spacebar` to jump.
+
+> [!TIP]
+> To activate the vehicle's horn, press the `H` key.
+
 ## Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
